@@ -1,0 +1,35 @@
+package AsalSayi; 
+import java.util.Scanner;
+
+public class AsalSayi {
+	public static void main(String[] args) {
+		System.out.println("Lütfen iki tam sayı değeri giriniz");
+		System.out.println("Küçük sayı:");
+		
+		
+		Scanner scan = new Scanner (System.in);
+		int a = scan.nextInt();
+		
+		System.out.println("Büyük sayi:");
+		int b = scan.nextInt();
+		
+	    int toplam=0;
+	    
+		for(int i=a; i<=b; i++) {
+		    int bayrak=1;
+			
+			for(int j=2;j<i;j++) {
+				if(i%j==0) {
+					bayrak=0;
+				}
+			}
+			
+			if(bayrak==1) {
+				toplam=toplam+i;
+			}
+		}
+		
+		System.out.println("Sonuc="+toplam);
+	}
+
+}
